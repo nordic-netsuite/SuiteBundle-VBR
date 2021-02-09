@@ -1,0 +1,92 @@
+{
+	fields: [{
+			name: 'INVOICE_TYPE',
+			mandatory: 'mandatory',
+		}, {
+			name: 'COMPANY_CODE',
+			mandatory: 'mandatory',
+		}, {
+			name: 'VENDOR_ID',
+			mandatory: 'mandatory',
+		}, {
+			name: 'INVOICE_NUMBER',
+			mandatory: 'mandatory',
+		}, {
+			name: 'PAYMENT_REFERENCE',
+			mandatory: 'optional',
+		}, {
+			name: 'CURRENCY_CODE',
+			mandatory: 'mandatory',
+		}, {
+			name: 'TERMS_ID',
+			mandatory: 'mandatory',
+		}, {
+			name: 'DUE_DATE',
+			mandatory: 'mandatory',
+		}, {
+			name: 'NET_AMOUNT',
+			mandatory: 'mandatory',
+		}, {
+			name: 'GROSS_AMOUNT',
+			mandatory: 'mandatory',
+		}, {
+			name: 'TAX_AMOUNT',
+			mandatory: 'mandatory',
+		}, {
+			name: 'EXTERNAL_ID',
+			mandatory: 'mandatory',
+		}, {
+			name: 'MEMO',
+			mandatory: 'optional',
+		},
+	],
+	sublists: [{
+			name: 'lines',
+			fields: [{
+					name: 'ACCOUNT',
+					mandatory: 'mandatory',
+				}, {
+					name: 'DEPARTMENT',
+					mandatory: 'optional',
+					setfield: false,
+				}, {
+					name: 'LOCATION',
+					mandatory: 'optional',
+					mapping: 'location',
+					setfield: false,
+				}, {
+					name: 'MEMO',
+					mandatory: 'optional',
+				}, {
+					name: 'CLASSIFICATION',
+					mandatory: 'optional',
+					mapping: 'class',
+					setfield: true,
+					setFieldValue: true,
+					type: 'text',
+				}, {
+					name: 'TAX_CODE_ID',
+					mandatory: 'mandatory',
+				}, {
+					name: 'NET_AMOUNT',
+					mandatory: 'mandatory',
+				}, {
+					name: 'TAX_AMOUNT',
+					mandatory: 'mandatory',
+				}, {
+					name: 'GROSS_AMOUNT',
+					mandatory: 'mandatory',
+				}, {
+					name: 'CUSTOMER_NAME',
+					mandatory: 'optional',
+				}, {
+					name: 'AMORTIZATION_START_DATE',
+					mandatory: 'optional',
+				}, {
+					name: 'AMORTIZATION_END_DATE',
+					mandatory: 'optional',
+				}
+			]
+		},
+	]
+}
